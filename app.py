@@ -6,7 +6,7 @@ import pandas as pd  # Biblioteca para manipulação de arquivos Excel
 GR_OPCOES = ["Skymark_Usiminas", "Opentech", "Klios_Cadastros","Klios_Consulta", "J&C","Skymark"]
 
 # Caminho do arquivo Excel onde os dados serão inseridos
-CAMINHO_DESTINO = r"\\192.168.0.254\datapar\TI\GR-Boletos.xlsx"
+CAMINHO_DESTINO = r"Local_excel_para_enviar"
 
 
 def selecionar_arquivo():

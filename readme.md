@@ -1,130 +1,100 @@
-# 📌 ETL de Dados
+# **📊 Automacao de Insercao de Dados em Excel**
 
-## 📋 Descrição do Projeto
+Este projeto consiste em uma aplicacao desenvolvida com **Python** e **CustomTkinter** para facilitar a insercao de dados em planilhas Excel, aplicando filtros especificos para diferentes tipos de GRs (**Gerenciamento de Riscos**).
 
-Este projeto consiste em um script Python que automatiza a inserção de dados em uma planilha Excel compartilhada. O usuário pode selecionar um arquivo Excel contendo informações, escolher algumas informações específica e inserir os dados filtrados no arquivo de destino.
+A ferramenta permite selecionar arquivos Excel, processa-los automaticamente e armazenar os dados na planilha de destino correta, garantindo uma estruturacao organizada e confiavel.
 
-## 🚀 Funcionalidades
+---
 
-- Seleção de um arquivo Excel para processamento.
-- Escolha de uma opção específica através de um dropdown.
-- Processamento e filtragem de dados conforme a GR selecionada.
-- Inserção dos dados na planilha correspondente dentro do arquivo de destino.
-- Interface gráfica amigável utilizando a biblioteca `customtkinter`.
-- Mensagens de erro e sucesso para melhor experiência do usuário.
+## **📌 Recursos Principais**
 
-## 🛠️ Tecnologias Utilizadas
+✅ Interface grafica moderna e responsiva utilizando **CustomTkinter**  
+✅ Selecao de arquivos Excel atraves de um **explorador de arquivos integrado**  
+✅ Aplicacao de **filtros inteligentes** para diferentes tipos de GRs  
+✅ **Armazenamento automatico** de dados organizados no Excel  
+✅ **Validacoes robustas** para evitar erros e inconsistencias  
+✅ **Mensagens interativas** para informar o usuario sobre o status da operacao  
 
-- Python 3
-- `customtkinter` – Interface gráfica personalizada
-- `pandas` – Manipulação de dados
-- `openpyxl` – Manipulação de arquivos Excel
-- `tkinter` – Para manipulação de arquivos e exibição de mensagens
+---
 
-## 📂 Estrutura do Código
+## **📂 Estrutura do Projeto**
 
-1. **Definição de constantes:**
-   - Lista de opções disponíveis.
-   - Caminho do arquivo Excel onde os dados serão armazenados.
-
-2. **Funções principais:**
-   - `selecionar_arquivo()`: Abre um seletor de arquivos e insere o caminho do arquivo selecionado na interface.
-   - `inserir_dados()`: Processa o arquivo Excel escolhido, aplica filtros específicos dependendo da GR e insere os dados no arquivo de destino.
-
-3. **Interface gráfica:**
-   - Criada com `customtkinter`, inclui:
-     - Dropdown para selecionar a GR.
-     - Campo de entrada para exibição do caminho do arquivo selecionado.
-     - Botões para selecionar o arquivo e inserir os dados.
-
-## 🏗️ Como Executar
-
-1. Instale as dependências necessárias:
-   ```sh
-   pip install customtkinter pandas openpyxl
-   ```
-2. Execute o script Python:
-   ```sh
-   python nome_do_script.py
-   ```
-3. Selecione a GR desejada, escolha um arquivo Excel e clique em "Inserir Dados".
-
-## ⚠️ Considerações
-
-- O script deve ter acesso à unidade de rede especificada ou local onde será enviado.
-- Certifique-se de que o arquivo Excel de destino não esteja aberto ao executar o script.
-
-
-## 🚀 Como Executar o Script
-
-### 1️⃣ Verifique se o Python está instalado
-Execute o seguinte comando para verificar a versão instalada:
-```bash
-python --version
+```
+📁 Automacao_Excel
+│── 📄 main.py              # Codigo principal da aplicacao
+│── 📄 requirements.txt     # Dependencias do projeto
+│── 📄 README.md            # Documentacao do projeto
 ```
 
-### 2️⃣ Crie um ambiente virtual
-Para isolar as dependências do projeto, crie um ambiente virtual:
+---
+
+## **⚙️ Tecnologias Utilizadas**
+
+📌 **Python** – Linguagem principal do projeto  
+📌 **CustomTkinter** – Framework para interfaces graficas modernas  
+📌 **pandas** – Manipulacao e tratamento de dados Excel  
+📌 **openpyxl** – Leitura e escrita em arquivos `.xlsx`  
+📌 **tkinter** – Para janelas de dialogo e mensagens interativas  
+
+---
+
+## **📥 Instalacao e Configuracao**
+
+### **1️⃣ Clone este repositorio**  
 ```bash
-python -m venv venv
+git clone https://github.com/seuusuario/Automacao_Excel.git
+cd Automacao_Excel
 ```
 
-### 3️⃣ Ative o ambiente virtual
-- **Windows (CMD/Powershell)**:
-  ```bash
-  venv\Scripts\activate
-  ```
-- **Linux/macOS (Terminal)**:
-  ```bash
-  source venv/bin/activate
-  ```
-
-### 4️⃣ Instale as dependências
-Caso o projeto tenha dependências, instale-as utilizando:
+### **2️⃣ Instale as dependencias**  
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5️⃣ Execute o script
+### **3️⃣ Execute a aplicacao**  
 ```bash
-python nome_do_script.py
+python main.py
 ```
-
-## 🔧 Como Criar um Executável
-
-Para transformar o script em um executável `.exe`, siga os passos abaixo:
-
-### 1️⃣ Instalar o PyInstaller
-Se ainda não tem o PyInstaller instalado, execute:
-```bash
-pip install pyinstaller
-```
-
-### 2️⃣ Gerar o Executável
-Navegue até a pasta onde o script está localizado e execute um dos seguintes comandos:
-
-#### Criar um único arquivo executável:
-```bash
-pyinstaller --onefile --noconsole nome_do_script.py
-```
-- `--onefile`: Gera um único arquivo `.exe`
-- `--noconsole`: Remove a janela do terminal ao executar o programa
-
-Este comando cria uma pasta `dist/` contendo o executável.
-
-### 3️⃣ Acessar o Executável
-Após a finalização do processo, vá até a pasta `dist/` e encontre o arquivo `.exe` gerado.
-
-### 4️⃣ (Opcional) Adicionar Ícone Personalizado
-Se quiser definir um ícone para o executável, use o parâmetro `--icon`:
-```bash
-pyinstaller --onefile --noconsole --icon=icone.ico nome_do_script.py
-```
-(Nota: O arquivo `.ico` deve estar no mesmo diretório que o script.)
-
-## 🛠 Possíveis Problemas e Soluções
-- **Erro de falta de módulo**: Se o executável não rodar, verifique se todas as bibliotecas necessárias estão instaladas.
-- **Antivírus bloqueando o `.exe`**: O PyInstaller pode gerar executáveis que alguns antivírus identificam como suspeitos. Tente adicionar o `.exe` à lista de exceções do antivírus.
 
 ---
-📌 **Desenvolvido por Davi Marques**
+
+## **📌 Como Funciona?**
+
+### **1️⃣ Selecione a GR**  
+Escolha a categoria correta no menu suspenso (**Skymark_Usiminas, Opentech, Klios_Cadastros, Klios_Consulta, J&C, Skymark**).  
+
+### **2️⃣ Escolha um Arquivo Excel**  
+Clique no botao **"Selecionar Arquivo"** e escolha o arquivo `.xlsx` com os dados a serem processados.  
+
+### **3️⃣ Insira os Dados**  
+Clique no botao **"Inserir Dados"** para que o sistema processe o arquivo e insira as informacoes na planilha de destino correta.  
+
+### **4️⃣ Sucesso!** 🎉  
+Uma mensagem de confirmacao aparecera informando que os dados foram inseridos com sucesso!  
+
+---
+
+## **🔧 Funcionalidades Detalhadas**
+
+### **🎯 Filtros Especificos para Cada GR**
+🔹 **J&C:** Remove linhas onde a segunda coluna esta vazia e ajusta indices  
+🔹 **Opentech:** Remove a primeira linha do arquivo  
+🔹 **Klios_Cadastros:** Processa apenas a aba "CADASTRO", removendo linhas invalidas  
+🔹 **Klios_Consulta:** Processa apenas a aba "CONSULTA", removendo valores inconsistentes  
+🔹 **Skymark_Usiminas:** Remove linhas vazias e exclui totalizacoes  
+🔹 **Skymark:** Remove linhas vazias e ajusta indices  
+
+### **🛠 Tratamento de Erros e Validacoes**
+✅ Verificacao se o usuario **selecionou um arquivo** antes de processar  
+✅ **Mensagens de erro amigaveis** caso algo esteja incorreto  
+✅ **Filtragem automatica** para manter apenas os dados relevantes  
+✅ **Validacao de planilhas** antes da importacao  
+
+---
+
+## **🚀 Melhorias Futuras**
+
+📌 Suporte para mais formatos de entrada alem de `.xlsx`  
+📌 Melhor interface grafica com exibicao dos dados processados  
+📌 Opcao de exportacao para diferentes formatos  
+📌 Suporte para multiplos arquivos ao mesmo tempo  
